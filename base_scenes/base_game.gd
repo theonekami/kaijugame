@@ -13,4 +13,5 @@ func _process(delta):
 
 
 func _on_conductor_report_beat(beat_position):
-	print(beat_position) # Replace with function body.
+	print(beat_position) 
+	print("hit")# Replace with function body.
