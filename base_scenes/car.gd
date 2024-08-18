@@ -4,7 +4,7 @@ var speed
 var speed_x
 var dir=0
 
-@export var type=1
+@export var type=2
 
 signal enter_car(car)
 # Called when the node enters the scene tree for the first time.
@@ -12,6 +12,8 @@ func _ready():
 	match type:
 		1:
 			$car.play("1_beat")
+		2:
+			$car.play("2_beat")
 	speed=300
 	speed_x=5
 	print("spawn")

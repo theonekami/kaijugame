@@ -2,7 +2,7 @@ extends Node2D
 
 var spawn_1_beat = 1
 var spawn_2_beat = 0
-var spawn_3_beat = -1
+var spawn_3_beat = -2
 var spawn_4_beat = 0
 var car_no=0
 var pressed_l=false
@@ -31,6 +31,7 @@ func _spawn_notes(to_spawn):
 		instance.dir=1
 		instance.add_to_group("cars")
 		car_no+=1
+		instance.type=to_spawn
 		#kill_left.connect(instance.dies)
 		$cars.add_child(instance)
 		#$back_ground.background.connect()
@@ -43,6 +44,7 @@ func _spawn_notes(to_spawn):
 		instance.dir=-1
 		instance.add_to_group("cars")
 		car_no+=1
+		instance.type=to_spawn*-1
 		$cars2.add_child(instance)
 		z.append(instance)
 

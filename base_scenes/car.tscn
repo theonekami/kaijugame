@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://6fy8f8gy5obw"]
+[gd_scene load_steps=17 format=3 uid="uid://6fy8f8gy5obw"]
 
 [ext_resource type="Script" path="res://base_scenes/car.gd" id="1_1tjh5"]
 [ext_resource type="Texture2D" uid="uid://dq36xns5w3s3q" path="res://art/car.png" id="1_orkyf"]
@@ -8,6 +8,12 @@
 [ext_resource type="Texture2D" uid="uid://bhmcr634xymmi" path="res://art/car/IMG_1598.PNG" id="6_2ouu6"]
 [ext_resource type="Texture2D" uid="uid://dvqr4gidnbtaj" path="res://art/car/IMG_1599.PNG" id="7_hwwmk"]
 [ext_resource type="Texture2D" uid="uid://ddnxg7rjiwlxt" path="res://art/car/IMG_1600.PNG" id="8_dwfbu"]
+[ext_resource type="Texture2D" uid="uid://c3p6qvxcokj1v" path="res://art/van/2KeyCar_frames/IMG_1601.PNG" id="9_dmjto"]
+[ext_resource type="Texture2D" uid="uid://copi0rt6b2pr7" path="res://art/van/2KeyCar_frames/IMG_1602.PNG" id="10_b7fuw"]
+[ext_resource type="Texture2D" uid="uid://b3xqsdfviqavj" path="res://art/van/2KeyCar_frames/IMG_1603.PNG" id="11_7mtjf"]
+[ext_resource type="Texture2D" uid="uid://h2f34pfs4rre" path="res://art/van/2KeyCar_frames/IMG_1604.PNG" id="12_5u2tb"]
+[ext_resource type="Texture2D" uid="uid://dl4qteaij2k6l" path="res://art/van/2KeyCar_frames/IMG_1605.PNG" id="13_3bc8t"]
+[ext_resource type="Texture2D" uid="uid://7781xv4sye5b" path="res://art/van/2KeyCar_frames/IMG_1606.PNG" id="14_tjmyi"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ccjcc"]
 animations = [{
@@ -33,6 +39,29 @@ animations = [{
 "loop": true,
 "name": &"1_beat",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_dmjto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_b7fuw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7mtjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_5u2tb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_3bc8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_tjmyi")
+}],
+"loop": true,
+"name": &"2_beat",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g6wke"]
@@ -49,8 +78,7 @@ texture = ExtResource("1_orkyf")
 [node name="car" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_ccjcc")
-animation = &"1_beat"
-frame_progress = 0.65992
+animation = &"2_beat"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_g6wke")
