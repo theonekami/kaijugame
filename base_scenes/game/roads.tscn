@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvwcms55k50x7"]
+
+[ext_resource type="PackedScene" uid="uid://co7bxbj5rgw1" path="res://base_scenes/state_machine.tscn" id="1_frd2y"]
+[ext_resource type="PackedScene" uid="uid://ll72s4r8qp7s" path="res://transfer/conductor.tscn" id="2_tw7rp"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StateMachine" parent="." instance=ExtResource("1_frd2y")]
+
+[node name="Conductor" parent="." instance=ExtResource("2_tw7rp")]

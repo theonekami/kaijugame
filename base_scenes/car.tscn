@@ -1,0 +1,61 @@
+[gd_scene load_steps=11 format=3 uid="uid://6fy8f8gy5obw"]
+
+[ext_resource type="Script" path="res://base_scenes/car.gd" id="1_1tjh5"]
+[ext_resource type="Texture2D" uid="uid://dq36xns5w3s3q" path="res://art/car.png" id="1_orkyf"]
+[ext_resource type="Texture2D" uid="uid://c0olxnp0kj0o" path="res://art/car/IMG_1595.PNG" id="3_co74i"]
+[ext_resource type="Texture2D" uid="uid://bso7w8f3wimln" path="res://art/car/IMG_1596.PNG" id="4_ooquq"]
+[ext_resource type="Texture2D" uid="uid://dw8x1nxy5yk2p" path="res://art/car/IMG_1597.PNG" id="5_0siro"]
+[ext_resource type="Texture2D" uid="uid://bhmcr634xymmi" path="res://art/car/IMG_1598.PNG" id="6_2ouu6"]
+[ext_resource type="Texture2D" uid="uid://dvqr4gidnbtaj" path="res://art/car/IMG_1599.PNG" id="7_hwwmk"]
+[ext_resource type="Texture2D" uid="uid://ddnxg7rjiwlxt" path="res://art/car/IMG_1600.PNG" id="8_dwfbu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ccjcc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_co74i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ooquq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0siro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2ouu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hwwmk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_dwfbu")
+}],
+"loop": true,
+"name": &"1_beat",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g6wke"]
+size = Vector2(237.625, 351.688)
+
+[node name="car" type="Area2D"]
+script = ExtResource("1_1tjh5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_orkyf")
+
+[node name="car" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_ccjcc")
+animation = &"1_beat"
+frame_progress = 0.65992
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_g6wke")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-1, -74)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

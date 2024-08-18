@@ -5,7 +5,7 @@ var spawn_2_beat = 0
 var spawn_3_beat = 1
 var spawn_4_beat = 0
 
-var note = load("res://Scenes/note.tscn")
+var note = load("res://base_scenes/car.tscn")
 
 
 # Called when the node enters the scene tree for the first time.
@@ -16,8 +16,7 @@ func _ready():
 func _spawn_notes(to_spawn):
 	if to_spawn > 0:
 		var instance = note.instantiate()
-		instance.scale = Vector2(3.6,3.6)
-		instance.initialize()
+		instance.scale = Vector2(0.25,0.25)
 		add_child(instance)
 
 

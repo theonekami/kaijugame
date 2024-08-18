@@ -1,0 +1,80 @@
+[gd_scene load_steps=15 format=3 uid="uid://c8cc3fgngn6ji"]
+
+[ext_resource type="Script" path="res://Head_bob.gd" id="1_3lspi"]
+[ext_resource type="Texture2D" uid="uid://dk3g075oybhnf" path="res://art/kaiju/Bob/Kaiju_headbob_loop-1.png" id="2_kmn2y"]
+[ext_resource type="Texture2D" uid="uid://b38shjcg83rp1" path="res://art/kaiju/Bob/Kaiju_headbob_loop-2.png" id="3_dp2x2"]
+[ext_resource type="Texture2D" uid="uid://d2vfedwid4pet" path="res://art/kaiju/Bob/Kaiju_headbob_loop-3.png" id="4_ysdq5"]
+[ext_resource type="Texture2D" uid="uid://d06hkyaqmou7x" path="res://art/kaiju/Bob/Kaiju_headbob_loop-4.png" id="5_e7vss"]
+[ext_resource type="Texture2D" uid="uid://b30h44vr246qc" path="res://art/kaiju/Bob/Kaiju_headbob_loop-5.png" id="6_hgsx7"]
+[ext_resource type="Texture2D" uid="uid://dgq58ojjh052f" path="res://art/kaiju/Bob/Kaiju_headbob_loop-6.png" id="7_thrb0"]
+[ext_resource type="Texture2D" uid="uid://dylfvt06qr4ht" path="res://art/kaiju/Bob/Kaiju_headbob_loop-7.png" id="8_4tk16"]
+[ext_resource type="Texture2D" uid="uid://dju4vvtjnbpnb" path="res://art/kaiju/Bob/Kaiju_headbob_loop-8.png" id="9_h6fsi"]
+[ext_resource type="Texture2D" uid="uid://63vig6r5dree" path="res://art/kaiju/Bob/Kaiju_headbob_loop-9.png" id="10_egg1d"]
+[ext_resource type="Texture2D" uid="uid://bva1frsqhqfl6" path="res://art/kaiju/Bob/Kaiju_headbob_loop-10.png" id="11_0phfc"]
+[ext_resource type="Texture2D" uid="uid://diur0njevr8i4" path="res://art/kaiju/Bob/Kaiju_headbob_loop-11.png" id="12_ofh7u"]
+[ext_resource type="Texture2D" uid="uid://liqkhkuwnhu5" path="res://art/kaiju/Bob/Kaiju_headbob_loop-12.png" id="13_qbou6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xtp4e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kmn2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dp2x2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ysdq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_e7vss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hgsx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_thrb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4tk16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_h6fsi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_egg1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_0phfc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ofh7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_qbou6")
+}],
+"loop": true,
+"name": &"bob",
+"speed": 20.0
+}]
+
+[node name="Head_bob" type="Node2D"]
+script = ExtResource("1_3lspi")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1452.0
+offset_top = -585.0
+offset_right = 1367.0
+offset_bottom = 576.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="Animation" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_xtp4e")
+animation = &"bob"

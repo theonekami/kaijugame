@@ -1,0 +1,105 @@
+[gd_scene load_steps=21 format=3 uid="uid://c860lx6usbj4e"]
+
+[ext_resource type="Script" path="res://duck.gd" id="1_pjq6h"]
+[ext_resource type="Texture2D" uid="uid://cwb68j1pms6pv" path="res://art/quack/Duck_death/Duck_poof-1.png" id="2_5prab"]
+[ext_resource type="Texture2D" uid="uid://dw358g202bu4c" path="res://art/quack/Duck_death/Duck_poof-2.png" id="3_10t5r"]
+[ext_resource type="Texture2D" uid="uid://dy2c21yrdtror" path="res://art/quack/Duck_death/Duck_poof-3.png" id="4_uy7sw"]
+[ext_resource type="Texture2D" uid="uid://sdsgvtelimlf" path="res://art/quack/Duck_death/Duck_poof-4.png" id="5_w0c78"]
+[ext_resource type="Texture2D" uid="uid://dyb62muksiirc" path="res://art/quack/Duck_death/Duck_poof-5.png" id="6_y62aq"]
+[ext_resource type="Texture2D" uid="uid://bgfh3ipmc3su1" path="res://art/quack/Duck_death/Duck_poof-6.png" id="7_cgla3"]
+[ext_resource type="Texture2D" uid="uid://dg7cah1msv6jh" path="res://art/quack/Duck_death/Duck_poof-7.png" id="8_eor4x"]
+[ext_resource type="Texture2D" uid="uid://bvtmr6forcnw3" path="res://art/quack/Duck_death/Duck_poof-8.png" id="9_bvueb"]
+[ext_resource type="Texture2D" uid="uid://o4ab1jtgophg" path="res://art/quack/Duck_death/Duck_poof-9.png" id="10_vnicc"]
+[ext_resource type="Texture2D" uid="uid://cfxt1sq11vft8" path="res://art/quack/Duck_walk_2/Duck_silly_walk-1.png" id="11_lpn8j"]
+[ext_resource type="Texture2D" uid="uid://bh3h8djbjajc4" path="res://art/quack/Duck_walk_2/Duck_silly_walk-2.png" id="12_pon1j"]
+[ext_resource type="Texture2D" uid="uid://dg532qgodpkp8" path="res://art/quack/Duck_walk_2/Duck_silly_walk-3.png" id="13_h71y6"]
+[ext_resource type="Texture2D" uid="uid://bqmok2tcy0ait" path="res://art/quack/Duck_walk_2/Duck_silly_walk-4.png" id="14_qjiwe"]
+[ext_resource type="Texture2D" uid="uid://cqccgtk63he85" path="res://art/quack/Duck_walk_2/Duck_silly_walk-5.png" id="15_6srtr"]
+[ext_resource type="Texture2D" uid="uid://4c0kf0k7d1uw" path="res://art/quack/Duck_walk_2/Duck_silly_walk-6.png" id="16_08ylm"]
+[ext_resource type="Texture2D" uid="uid://bu2x7n2lwgn50" path="res://art/quack/Duck_walk_2/Duck_silly_walk-7.png" id="17_ywwog"]
+[ext_resource type="Texture2D" uid="uid://5eruuvw6qm3f" path="res://art/quack/Duck_walk_2/Duck_silly_walk-8.png" id="18_3ivdk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2j22y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5prab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_10t5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uy7sw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_w0c78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_y62aq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cgla3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_eor4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_bvueb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_vnicc")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"death",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_lpn8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_pon1j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_h71y6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qjiwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_6srtr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_08ylm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ywwog")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_3ivdk")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l3r1e"]
+size = Vector2(871.5, 807.5)
+
+[node name="duck" type="Area2D"]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_pjq6h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2j22y")
+animation = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-18.25, 0)
+shape = SubResource("RectangleShape2D_l3r1e")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

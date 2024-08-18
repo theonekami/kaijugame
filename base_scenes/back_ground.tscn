@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=3 uid="uid://cketq0gkys6gd"]
+
+[ext_resource type="Script" path="res://back_ground.gd" id="1_6pcqf"]
+[ext_resource type="Texture2D" uid="uid://bkh5rp8ihkiwh" path="res://art/Background.png" id="2_kcuhs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqbo7"]
+size = Vector2(316, 326)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kitrk"]
+size = Vector2(316.25, 285)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_skdk1"]
+size = Vector2(319, 218.5)
+
+[node name="back_ground" type="Node2D"]
+script = ExtResource("1_6pcqf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_kcuhs")
+
+[node name="Left_area_good" type="Area2D" parent="."]
+position = Vector2(-160, 444)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left_area_good"]
+shape = SubResource("RectangleShape2D_aqbo7")
+
+[node name="Left_area_cool" type="Area2D" parent="."]
+position = Vector2(-160, 444)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left_area_cool"]
+position = Vector2(0, 10.5)
+shape = SubResource("RectangleShape2D_kitrk")
+debug_color = Color(0.192157, 0.611765, 0.556863, 0.419608)
+
+[node name="Left_area_perfect" type="Area2D" parent="."]
+position = Vector2(-160, 444)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left_area_perfect"]
+position = Vector2(0, 16.75)
+shape = SubResource("RectangleShape2D_skdk1")
+debug_color = Color(0.184314, 0.329412, 0.27451, 0.419608)
+
+[node name="right_area_good" type="Area2D" parent="."]
+position = Vector2(179, 444)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right_area_good"]
+shape = SubResource("RectangleShape2D_aqbo7")
+
+[node name="right_area_cool" type="Area2D" parent="."]
+position = Vector2(179, 444)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right_area_cool"]
+position = Vector2(0, 10.5)
+shape = SubResource("RectangleShape2D_kitrk")
+debug_color = Color(0.192157, 0.611765, 0.556863, 0.419608)
+
+[node name="right_area_perfect" type="Area2D" parent="."]
+position = Vector2(179, 444)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right_area_perfect"]
+position = Vector2(0, 16.75)
+shape = SubResource("RectangleShape2D_skdk1")
+debug_color = Color(0.184314, 0.329412, 0.27451, 0.419608)
+
+[connection signal="area_entered" from="Left_area_good" to="." method="_on_left_area_good_area_entered"]
+[connection signal="area_exited" from="Left_area_good" to="." method="_on_left_area_good_area_exited"]
+[connection signal="area_entered" from="Left_area_cool" to="." method="_on_left_area_cool_area_entered"]
+[connection signal="area_exited" from="Left_area_cool" to="." method="_on_left_area_cool_area_exited"]
+[connection signal="area_entered" from="Left_area_perfect" to="." method="_on_left_area_perfect_area_entered"]
+[connection signal="area_exited" from="Left_area_perfect" to="." method="_on_left_area_perfect_area_exited"]
+[connection signal="area_entered" from="right_area_good" to="." method="_on_right_area_good_area_entered"]
+[connection signal="area_exited" from="right_area_good" to="." method="_on_right_area_good_area_exited"]
+[connection signal="area_entered" from="right_area_cool" to="." method="_on_right_area_cool_area_entered"]
+[connection signal="area_exited" from="right_area_cool" to="." method="_on_right_area_cool_area_exited"]
+[connection signal="area_entered" from="right_area_perfect" to="." method="_on_right_area_perfect_area_entered"]
+[connection signal="area_exited" from="right_area_perfect" to="." method="_on_right_area_perfect_area_exited"]
