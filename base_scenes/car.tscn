@@ -78,7 +78,8 @@ texture = ExtResource("1_orkyf")
 [node name="car" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_ccjcc")
-animation = &"2_beat"
+animation = &"1_beat"
+frame_progress = 0.841836
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_g6wke")
