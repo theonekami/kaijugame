@@ -13,7 +13,6 @@ scale = Vector2(3.595, 3.6)
 
 [node name="Conductor" parent="." instance=ExtResource("3_4134r")]
 bpm = 150
-measures = 4
 
 [connection signal="report_beat" from="Conductor" to="." method="_on_conductor_report_beat"]
 [connection signal="report_measure" from="Conductor" to="." method="_on_conductor_report_measure"]
