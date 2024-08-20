@@ -25,7 +25,10 @@ func _ready():
 	beatmap_array = text.split(",\n", true) 
 	
 
-func _spawn_notes(to_spawn):
+func _spawn_notes(to_spawn_letter):
+	var to_spawn = int(to_spawn_letter)
+	print("note ...")
+	print(to_spawn)
 	if to_spawn > 0:
 		var instance = note.instantiate()
 		instance.position=Vector2(narrowest,height)
@@ -52,13 +55,14 @@ func _spawn_notes(to_spawn):
 
 
 func _on_conductor_report_measure(measure_position):
+	print("spawning ...")
+	print(measure_position)
+	print(spawn_beats)
 	_spawn_notes(spawn_beats[measure_position - 1])
 
 
 func _on_conductor_report_beat(beat_position):
-	print(beat_position / 8)
-	var beats = beatmap_array[beat_position / 8]
-	for n in range(0, 8): spawn_beats[n] = int(beats[n])
+	spawn_beats = beatmap_array[beat_position / 8]
 
 func _on_state_machine_left_press(number):
 	pressed_l=true
