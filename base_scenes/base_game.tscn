@@ -17,9 +17,9 @@ script = ExtResource("1_r8bap")
 
 [node name="Conductor" parent="." instance=ExtResource("2_2yinu")]
 stream = ExtResource("4_qiol7")
-volume_db = -37.638
-bpm = 120
-measures = 4
+volume_db = 0.21
+bpm = 240
+measures = 8
 
 [node name="ColorRect" parent="." instance=ExtResource("5_uvm5r")]
 visible = false
