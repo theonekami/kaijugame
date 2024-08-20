@@ -1,8 +1,8 @@
 extends Node2D
 
-var spawn_1_beat = 2
+var spawn_1_beat = 0
 var spawn_2_beat = 0
-var spawn_3_beat = -2
+var spawn_3_beat = 0
 var spawn_4_beat = 0
 var car_no=0
 var pressed_l=false
@@ -63,10 +63,10 @@ func _on_conductor_report_measure(measure_position):
 
 func _on_conductor_report_beat(beat_position):
 	if beat_position > 3 and beat_position<6:
-		spawn_1_beat = -2
-		spawn_2_beat = 2
-		spawn_3_beat = -2
-		spawn_4_beat = 2
+		spawn_1_beat = -4
+		spawn_2_beat = 0
+		spawn_3_beat = 4
+		spawn_4_beat = 0
 
 
 
