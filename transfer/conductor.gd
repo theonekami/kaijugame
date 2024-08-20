@@ -8,7 +8,7 @@ signal report_measure(measure_position)
 
 # Tracking the beat and song position
 var song_position = 0.0
-var song_position_in_beats = 1
+var song_position_in_beats = -1
 var sec_per_beat
 var last_reported_beat = 0
 var beats_before_start = 0

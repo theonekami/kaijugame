@@ -15,20 +15,22 @@ var note = load("res://base_scenes/car.tscn")
 var narrowest = 399
 var widest = 399
 var height = 400
+var car_speed = 300
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Conductor.play_with_beat_offset(0)
+	$Conductor.play_with_beat_offset((900/car_speed) * 4)
 	var label_text_res = "res://transfer/beatmap.txt"
 	var file = FileAccess.open(label_text_res, FileAccess.READ)
 	var text = file.get_as_text()
 	beatmap_array = text.split(",\n", true) 
 	
 
-func _spawn_notes(to_spawn_letter):
-	var to_spawn = int(to_spawn_letter)
-	print("note ...")
-	print(to_spawn)
+func _spawn_notes(array, index):
+	var to_spawn = int(array[index * 2])
+	print(str("received: ", index, " of ", array))
+	print(str("note:", to_spawn))
+	print("-----------")
 	if to_spawn > 0:
 		var instance = note.instantiate()
 		instance.position=Vector2(narrowest,height)
@@ -55,14 +57,16 @@ func _spawn_notes(to_spawn_letter):
 
 
 func _on_conductor_report_measure(measure_position):
-	print("spawning ...")
-	print(measure_position)
-	print(spawn_beats)
-	_spawn_notes(spawn_beats[measure_position - 1])
+	print(str("spawning: ", measure_position - 1, " at ", spawn_beats))
+	#print(measure_position)
+	#print(spawn_beats)
+	print("---")
+	_spawn_notes(spawn_beats, measure_position - 1)
 
 
 func _on_conductor_report_beat(beat_position):
-	spawn_beats = beatmap_array[beat_position / 8]
+	print(str("beat: ", (beat_position - 1) / 8))
+	spawn_beats = beatmap_array[(beat_position - 1) / 8]
 
 func _on_state_machine_left_press(number):
 	pressed_l=true
