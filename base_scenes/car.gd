@@ -3,6 +3,7 @@ extends Area2D
 var speed
 var speed_x
 var dir=0
+var exit=false
 
 @export var type=2
 
@@ -48,6 +49,7 @@ func _process(delta):
 
 func dies():
 	print("DEATH")
+	exit=true
 	queue_free()
 
 func _on_visible_on_screen_notifier_2d_screen_exited():

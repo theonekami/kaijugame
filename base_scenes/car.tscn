@@ -153,7 +153,7 @@ shape = SubResource("RectangleShape2D_y471s")
 disabled = true
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(-1, -74)
+position = Vector2(6.25, -6.25001)
 
 [node name="pick_up_collision" type="CollisionShape2D" parent="."]
 position = Vector2(4.5, -7.5)
