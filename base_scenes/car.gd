@@ -25,7 +25,7 @@ func _ready():
 			$truck_collision.disabled=false
 	speed=300
 	speed_x=5
-	print("spawn")
+
 
 #func _input(event):
 	#if event.is_action_pressed("debug"):
@@ -48,7 +48,6 @@ func _process(delta):
 	pass
 
 func dies():
-	print("DEATH")
 	exit=true
 	queue_free()
 
