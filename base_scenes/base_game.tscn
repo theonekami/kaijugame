@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://base_scenes/base_game.gd" id="1_r8bap"]
 [ext_resource type="PackedScene" uid="uid://ll72s4r8qp7s" path="res://transfer/conductor.tscn" id="2_2yinu"]
 [ext_resource type="PackedScene" uid="uid://dek5hrpmtf5mm" path="res://base_scenes/state_machine.tscn" id="2_hb82y"]
-[ext_resource type="AudioStream" uid="uid://lknc4suwhklf" path="res://music/Kagamine RinLenElectric Angel _えれくとりっくえんじぇぅ_VOCALOID-PV (1).mp3" id="3_xilwj"]
+[ext_resource type="AudioStream" uid="uid://tqgvb30yhy82" path="res://music/kaiju_song_1.wav" id="3_xilwj"]
 [ext_resource type="PackedScene" uid="uid://dh2qyx81ushdp" path="res://base_scenes/line.tscn" id="5_uvm5r"]
 [ext_resource type="PackedScene" uid="uid://cketq0gkys6gd" path="res://base_scenes/back_ground.tscn" id="6_astkd"]
 [ext_resource type="PackedScene" uid="uid://d0ysgeta1wa15" path="res://base_scenes/leg.tscn" id="7_tjv57"]
@@ -17,9 +17,9 @@ script = ExtResource("1_r8bap")
 
 [node name="Conductor" parent="." instance=ExtResource("2_2yinu")]
 stream = ExtResource("3_xilwj")
-volume_db = -42.59
-bpm = 120
-measures = 4
+volume_db = 9.221
+bpm = 240
+measures = 8
 
 [node name="ColorRect" parent="." instance=ExtResource("5_uvm5r")]
 visible = false

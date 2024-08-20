@@ -5,8 +5,6 @@ var speed
 func _ready():
 	speed=300
 
-	print("spawn")
-
 #func _input(event):
 	#if event.is_action_pressed("debug"):
 		#move()

@@ -16,7 +16,6 @@ func _ready():
 			$car.play("2_beat")
 	speed=300
 	speed_x=5
-	print("spawn")
 
 #func _input(event):
 	#if event.is_action_pressed("debug"):
@@ -39,7 +38,6 @@ func _process(delta):
 	pass
 
 func dies():
-	print("DEATH")
 	queue_free()
 
 func _on_visible_on_screen_notifier_2d_screen_exited():

@@ -1,16 +1,15 @@
 extends AudioStreamPlayer2D
-
-@export var bpm: int = 100
-@export var measures: int = 4
-
 #signals to report song position, beat and measure
 signal report_beat(beat_position)
 signal report_measure(measure_position)
 
+@export var bpm: int = 120
+@export var measures: int = 64
+
 # Tracking the beat and song position
 var song_position = 0.0
-var song_position_in_beats = 1
-var sec_per_beat = 60.0 / bpm
+var song_position_in_beats = -1
+var sec_per_beat
 var last_reported_beat = 0
 var beats_before_start = 0
 var measure = 1
@@ -41,8 +40,8 @@ func _report_beat():
 		#to track measure and reset
 		if measure > measures:
 			measure = 1
-		print("beats: " + str(song_position_in_beats))
-		print("beat in measure: " + str(measure))
+		#print("beats: " + str(song_position_in_beats))
+		#print("beat in measure: " + str(measure))
 		report_beat.emit(song_position_in_beats)
 		report_measure.emit(measure)
 		last_reported_beat = song_position_in_beats
