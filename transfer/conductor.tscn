@@ -10,4 +10,8 @@ measures = 2
 [node name="StartTimer" type="Timer" parent="."]
 one_shot = true
 
+[node name="end_timer" type="Timer" parent="."]
+
+[connection signal="finished" from="." to="." method="_on_finished"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_StartTimer_timeout"]
+[connection signal="timeout" from="end_timer" to="." method="_on_end_timer_timeout"]

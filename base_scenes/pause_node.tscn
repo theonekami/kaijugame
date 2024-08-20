@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmi4m42ai561w"]
+
+[ext_resource type="Script" path="res://base_scenes/Pause_node.gd" id="1_xnsr1"]
+[ext_resource type="Texture2D" uid="uid://bjrigwnwafuin" path="res://MenuPopUP (1).png" id="2_ybb2h"]
+
+[node name="Pause_node" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_xnsr1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(540, 961)
+texture = ExtResource("2_ybb2h")

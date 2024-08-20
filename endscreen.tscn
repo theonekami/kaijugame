@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://co1mo6ftk0wvc"]
+
+[ext_resource type="Script" path="res://endscreen.gd" id="1_ran76"]
+[ext_resource type="Texture2D" uid="uid://f6pnfvcus6b" path="res://Background final.png" id="2_6vk36"]
+[ext_resource type="Texture2D" uid="uid://bbc0snjnupuck" path="res://FinalScore.png" id="3_ljsi1"]
+
+[sub_resource type="Theme" id="Theme_jev5t"]
+Label/colors/font_color = Color(0.427451, 0.690196, 0.952941, 1)
+Label/colors/font_outline_color = Color(0.0588235, 0, 0.505882, 1)
+Label/constants/outline_size = 50
+Label/font_sizes/font_size = 135
+
+[node name="endscreen" type="Node2D"]
+script = ExtResource("1_ran76")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(543, 962)
+texture = ExtResource("2_6vk36")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(548, 891)
+texture = ExtResource("3_ljsi1")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 398.0
+offset_top = 1150.0
+offset_right = 668.0
+offset_bottom = 1335.0
+theme = SubResource("Theme_jev5t")
+text = "TEst"

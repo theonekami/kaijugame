@@ -33,6 +33,9 @@ func _physics_process(_delta):
 		song_position_in_beats = int(floor(song_position / sec_per_beat)) + beats_before_start
 		_report_beat()
 
+	if Input.is_action_just_pressed("debug"):
+		_on_finished()
+
 
 #responsible for emitting our signals and report song position based on beat and measure
 func _report_beat():
@@ -84,3 +87,12 @@ func _on_StartTimer_timeout():
 		play()
 		$StartTimer.stop()
 	_report_beat()
+
+
+func _on_finished():
+	$end_timer.start()
+	 # Replace with function body.
+
+
+func _on_end_timer_timeout():
+	get_tree().change_scene_to_file("res://endscreen.tscn") # Replace with function body.

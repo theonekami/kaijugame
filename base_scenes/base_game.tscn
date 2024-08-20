@@ -1,19 +1,25 @@
-[gd_scene load_steps=10 format=3 uid="uid://6pyb2axv8poq"]
+[gd_scene load_steps=13 format=3 uid="uid://6pyb2axv8poq"]
 
 [ext_resource type="Script" path="res://base_scenes/base_game.gd" id="1_r8bap"]
 [ext_resource type="PackedScene" uid="uid://ll72s4r8qp7s" path="res://transfer/conductor.tscn" id="2_2yinu"]
 [ext_resource type="PackedScene" uid="uid://dek5hrpmtf5mm" path="res://base_scenes/state_machine.tscn" id="2_hb82y"]
+[ext_resource type="PackedScene" uid="uid://c7lr7nvp5c3y" path="res://music/beatmap.tscn" id="3_r7hfm"]
 [ext_resource type="AudioStream" uid="uid://4l5aicqhxqbk" path="res://music/kaiju_song_1.wav" id="4_qiol7"]
 [ext_resource type="PackedScene" uid="uid://dh2qyx81ushdp" path="res://base_scenes/line.tscn" id="5_uvm5r"]
 [ext_resource type="PackedScene" uid="uid://cketq0gkys6gd" path="res://base_scenes/back_ground.tscn" id="6_astkd"]
 [ext_resource type="PackedScene" uid="uid://d0ysgeta1wa15" path="res://base_scenes/leg.tscn" id="7_tjv57"]
 [ext_resource type="PackedScene" uid="uid://c8cc3fgngn6ji" path="res://base_scenes/head_bob.tscn" id="8_ab6j2"]
 [ext_resource type="PackedScene" uid="uid://cqag317jduqsk" path="res://base_scenes/duckline.tscn" id="9_regry"]
+[ext_resource type="PackedScene" uid="uid://dmi4m42ai561w" path="res://base_scenes/pause_node.tscn" id="11_g2100"]
+[ext_resource type="Texture2D" uid="uid://h8ohop5jfy8o" path="res://MenuButton.png" id="12_ynmaf"]
 
 [node name="BaseGame" type="Node2D" groups=["cars"]]
 script = ExtResource("1_r8bap")
 
 [node name="StateMachine" parent="." instance=ExtResource("2_hb82y")]
+process_mode = 1
+
+[node name="beatmap" parent="." instance=ExtResource("3_r7hfm")]
 
 [node name="Conductor" parent="." instance=ExtResource("2_2yinu")]
 stream = ExtResource("4_qiol7")
@@ -44,6 +50,16 @@ scale = Vector2(0.4, 0.4)
 [node name="duckline" parent="." instance=ExtResource("9_regry")]
 position = Vector2(0, 1678)
 
+[node name="Pause_node" parent="." instance=ExtResource("11_g2100")]
+
+[node name="TextureButton" type="TextureButton" parent="."]
+process_mode = 3
+offset_left = 901.0
+offset_top = 15.0
+offset_right = 1076.0
+offset_bottom = 102.0
+texture_normal = ExtResource("12_ynmaf")
+
 [connection signal="kill_left" from="." to="back_ground" method="_on_base_game_kill_left"]
 [connection signal="kill_right" from="." to="back_ground" method="_on_base_game_kill_right"]
 [connection signal="left_press" from="StateMachine" to="." method="_on_state_machine_left_press"]
@@ -55,3 +71,4 @@ position = Vector2(0, 1678)
 [connection signal="hit_left" from="back_ground" to="Head_bob" method="_on_back_ground_hit_left"]
 [connection signal="hit_right" from="back_ground" to="leg_r" method="_on_back_ground_hit_right"]
 [connection signal="hit_right" from="back_ground" to="Head_bob" method="_on_back_ground_hit_left"]
+[connection signal="pressed" from="TextureButton" to="Pause_node" method="_on_texture_button_pressed"]

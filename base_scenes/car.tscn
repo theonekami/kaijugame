@@ -131,7 +131,7 @@ size = Vector2(219, 425)
 size = Vector2(311, 723)
 
 [node name="car" type="Area2D"]
-scale = Vector2(0.8, 0.8)
+scale = Vector2(0.4, 0.4)
 script = ExtResource("1_1tjh5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

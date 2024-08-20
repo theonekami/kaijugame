@@ -19,6 +19,7 @@ signal left_press(number)
 signal right_press(number)
 var a_ongoing=false
 var b_ongoing=false
+var pause=false
 
 func x_check(now, x_time):
 	if (now - x_time < max_milliseconds):
@@ -70,7 +71,7 @@ func _physics_process(delta):
 		print("all one")
 		right_press.emit(1)
 		$input_buffer2.start()
-	
+
 	#if a and $input_buffer.time_left==0 and b and c:
 		#if b:
 			#if c:

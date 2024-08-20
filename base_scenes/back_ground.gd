@@ -47,8 +47,9 @@ func _on_left_area_cool_area_exited(area):
 func _on_left_area_good_area_exited(area):
 	current_mod_left=0 # Replace with function body.
 	exited_l.emit()
-	if not(area.exit):
-		$too_slow_l.play("too_slow")
+	if area.is_in_group("cars"):
+		if not(area.exit):
+			$too_slow_l.play("too_slow")
 	area_l.pop_front()
 
 func _on_base_game_kill_left(num):
@@ -58,6 +59,7 @@ func _on_base_game_kill_left(num):
 			if i.type==num:
 				i.dies()
 				y=true
+				Score.score+=1
 			elif i.type>num:
 				$too_soft_l.play("too_soft")
 			elif i.type<num:
@@ -97,8 +99,9 @@ func _on_right_area_cool_area_exited(area):
 func _on_right_area_good_area_exited(area):
 	current_mod_right=0 # Replace with function body.
 	exited_r.emit()
-	if not(area.exit):
-		$too_slow_r.play("too_slow")
+	if area.is_in_group("cars"):
+		if not(area.exit):
+			$too_slow_r.play("too_slow")
 	area_r.pop_front() # Replace with function body.
 
 
@@ -108,6 +111,7 @@ func _on_base_game_kill_right(num):
 		if i.is_in_group("cars"):
 			if i.type==num:
 				i.dies()
+				Score.score+=1
 			elif i.type>num:
 				$too_soft_r.play("too_soft")
 			elif i.type<num:

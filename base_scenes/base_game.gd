@@ -10,6 +10,7 @@ signal kill_left(num)
 signal kill_right()
 
 
+
 var z=[]
 
 var note = load("res://base_scenes/car.tscn")
@@ -20,14 +21,17 @@ var car_speed = 300
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Conductor.play_with_beat_offset((900/car_speed) * 4)
-	var label_text_res = "res://transfer/beatmap.txt"
-	var file = FileAccess.open(label_text_res, FileAccess.READ)
-	var text = file.get_as_text()
-	beatmap_array = text.split(",\n", true) 
+	#var label_text_res = "res://transfer/beatmap.txt"
+	#var file = FileAccess.open(label_text_res, FileAccess.READ)
+	#var text = file.get_as_text()
+	beatmap_array = $beatmap.y.split(",\n", true) 
+	print(beatmap_array)
+
 
 
 func _spawn_notes(array, index):
 	var to_spawn = int(array[index * 2])
+	
 	print(str("received: ", index, " of ", array))
 	print(str("note:", to_spawn))
 	print("-----------")
