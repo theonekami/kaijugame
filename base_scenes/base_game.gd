@@ -21,13 +21,14 @@ var car_speed = 300
 func _ready():
 	$Conductor.play_with_beat_offset((900/car_speed) * 4)
 	var label_text_res = "res://transfer/beatmap.txt"
+	# var label_text_res = "res://transfer/beatmap_easier.txt"
 	var file = FileAccess.open(label_text_res, FileAccess.READ)
 	var text = file.get_as_text()
 	beatmap_array = text.split(",\n", true) 
 	
 
 func _spawn_notes(array, index):
-	var to_spawn = int(array[index * 2])
+	var to_spawn = int(array[index])
 	print(str("received: ", index, " of ", array))
 	print(str("note:", to_spawn))
 	print("-----------")
@@ -65,8 +66,12 @@ func _on_conductor_report_measure(measure_position):
 
 
 func _on_conductor_report_beat(beat_position):
-	print(str("beat: ", (beat_position - 1) / 8))
-	spawn_beats = beatmap_array[(beat_position - 1) / 8]
+	var beat_to_measure = (beat_position - 1) / 8
+	print(str("beat: ", beat_to_measure))
+	if beat_to_measure >= 45:
+		spawn_beats = [0, 0, 0, 0, 0, 0, 0, 0]
+	else:
+		spawn_beats = beatmap_array[beat_to_measure].split(" ")
 
 func _on_state_machine_left_press(number):
 	pressed_l=true
