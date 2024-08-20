@@ -1,7 +1,31 @@
-[gd_scene load_steps=6 format=3 uid="uid://cketq0gkys6gd"]
+[gd_scene load_steps=11 format=3 uid="uid://cketq0gkys6gd"]
 
-[ext_resource type="Script" path="res://base_scenes/back_ground.gd" id="1_6pcqf"]
+[ext_resource type="Script" path="res://base_scenes/back_ground.gd" id="1_2odej"]
 [ext_resource type="Texture2D" uid="uid://bkh5rp8ihkiwh" path="res://art/Background.png" id="2_kcuhs"]
+[ext_resource type="Texture2D" uid="uid://b16mtbdib2nsa" path="res://art/Hydrant/Slide_16_9_-_10_2-1.png" id="3_3fid3"]
+[ext_resource type="Texture2D" uid="uid://c57cvgog484eq" path="res://art/Hydrant/Slide_16_9_-_10_2-2.png" id="4_t1xga"]
+[ext_resource type="Texture2D" uid="uid://jlme8b4g5goj" path="res://art/Hydrant/Slide_16_9_-_10_2-3.png" id="5_6ki36"]
+[ext_resource type="Texture2D" uid="uid://h3x6kqhyvna8" path="res://art/Hydrant/Slide_16_9_-_10_2-4.png" id="6_ktr61"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tkdjc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_3fid3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_t1xga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6ki36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ktr61")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aqbo7"]
 size = Vector2(316, 326)
@@ -13,10 +37,15 @@ size = Vector2(316.25, 285)
 size = Vector2(319, 218.5)
 
 [node name="back_ground" type="Node2D"]
-script = ExtResource("1_6pcqf")
+script = ExtResource("1_2odej")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_kcuhs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_tkdjc")
+autoplay = "default"
+frame_progress = 0.593513
 
 [node name="Left_area_good" type="Area2D" parent="."]
 position = Vector2(-160, 444)

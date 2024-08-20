@@ -1,40 +1,48 @@
-[gd_scene load_steps=17 format=3 uid="uid://6fy8f8gy5obw"]
+[gd_scene load_steps=31 format=3 uid="uid://6fy8f8gy5obw"]
 
 [ext_resource type="Script" path="res://base_scenes/car.gd" id="1_1tjh5"]
 [ext_resource type="Texture2D" uid="uid://dq36xns5w3s3q" path="res://art/car.png" id="1_orkyf"]
-[ext_resource type="Texture2D" uid="uid://c0olxnp0kj0o" path="res://art/car/IMG_1595.PNG" id="3_co74i"]
-[ext_resource type="Texture2D" uid="uid://bso7w8f3wimln" path="res://art/car/IMG_1596.PNG" id="4_ooquq"]
-[ext_resource type="Texture2D" uid="uid://dw8x1nxy5yk2p" path="res://art/car/IMG_1597.PNG" id="5_0siro"]
-[ext_resource type="Texture2D" uid="uid://bhmcr634xymmi" path="res://art/car/IMG_1598.PNG" id="6_2ouu6"]
-[ext_resource type="Texture2D" uid="uid://dvqr4gidnbtaj" path="res://art/car/IMG_1599.PNG" id="7_hwwmk"]
-[ext_resource type="Texture2D" uid="uid://ddnxg7rjiwlxt" path="res://art/car/IMG_1600.PNG" id="8_dwfbu"]
-[ext_resource type="Texture2D" uid="uid://c3p6qvxcokj1v" path="res://art/van/2KeyCar_frames/IMG_1601.PNG" id="9_dmjto"]
-[ext_resource type="Texture2D" uid="uid://copi0rt6b2pr7" path="res://art/van/2KeyCar_frames/IMG_1602.PNG" id="10_b7fuw"]
-[ext_resource type="Texture2D" uid="uid://b3xqsdfviqavj" path="res://art/van/2KeyCar_frames/IMG_1603.PNG" id="11_7mtjf"]
-[ext_resource type="Texture2D" uid="uid://h2f34pfs4rre" path="res://art/van/2KeyCar_frames/IMG_1604.PNG" id="12_5u2tb"]
-[ext_resource type="Texture2D" uid="uid://dl4qteaij2k6l" path="res://art/van/2KeyCar_frames/IMG_1605.PNG" id="13_3bc8t"]
-[ext_resource type="Texture2D" uid="uid://7781xv4sye5b" path="res://art/van/2KeyCar_frames/IMG_1606.PNG" id="14_tjmyi"]
+[ext_resource type="Texture2D" uid="uid://dtyd28wn0j1xv" path="res://art/car/1KeyCar/IMG_1619.PNG" id="3_05rpq"]
+[ext_resource type="Texture2D" uid="uid://c2i8mvjhy35ly" path="res://art/car/1KeyCar/IMG_1620.PNG" id="4_cgex6"]
+[ext_resource type="Texture2D" uid="uid://b3flput8jds8v" path="res://art/car/1KeyCar/IMG_1621.PNG" id="5_21aqw"]
+[ext_resource type="Texture2D" uid="uid://c0yxbqk26jehg" path="res://art/car/1KeyCar/IMG_1622.PNG" id="6_c8jih"]
+[ext_resource type="Texture2D" uid="uid://cpwn04gclpgdb" path="res://art/car/1KeyCar/IMG_1624.PNG" id="7_4dxpb"]
+[ext_resource type="Texture2D" uid="uid://x32ltai5bosw" path="res://art/van/2KeyCar_frames/IMG_1625.PNG" id="8_bqoqb"]
+[ext_resource type="Texture2D" uid="uid://dhnmc4hkymys8" path="res://art/van/2KeyCar_frames/IMG_1626.PNG" id="9_yvhk6"]
+[ext_resource type="Texture2D" uid="uid://v1i8fcxd5hs4" path="res://art/van/2KeyCar_frames/IMG_1627.PNG" id="10_j2sip"]
+[ext_resource type="Texture2D" uid="uid://dcjxntf015pq8" path="res://art/van/2KeyCar_frames/IMG_1628.PNG" id="11_8qlvx"]
+[ext_resource type="Texture2D" uid="uid://1qdou3v1x86k" path="res://art/van/2KeyCar_frames/IMG_1629.PNG" id="12_bxhk4"]
+[ext_resource type="Texture2D" uid="uid://d1nfnl2mhrsv2" path="res://art/van/2KeyCar_frames/IMG_1630.PNG" id="13_ubfwy"]
+[ext_resource type="Texture2D" uid="uid://bj0mviv2alw6f" path="res://art/4KeyCar_frames/IMG_1643.PNG" id="14_avocg"]
+[ext_resource type="Texture2D" uid="uid://bn1owvqoi35bi" path="res://art/3KeyCar_frames/IMG_1637.PNG" id="14_isldf"]
+[ext_resource type="Texture2D" uid="uid://bq7vv7pmxou8d" path="res://art/4KeyCar_frames/IMG_1644.PNG" id="15_fsm1s"]
+[ext_resource type="Texture2D" uid="uid://kpeerirq0nsi" path="res://art/3KeyCar_frames/IMG_1638.PNG" id="15_unuhh"]
+[ext_resource type="Texture2D" uid="uid://cul310gm5bo7l" path="res://art/3KeyCar_frames/IMG_1639.PNG" id="16_7ld6x"]
+[ext_resource type="Texture2D" uid="uid://dg0m7qdjwclxe" path="res://art/4KeyCar_frames/IMG_1645.PNG" id="16_o23vy"]
+[ext_resource type="Texture2D" uid="uid://s1a1h05pl4fo" path="res://art/4KeyCar_frames/IMG_1646.PNG" id="17_chg4q"]
+[ext_resource type="Texture2D" uid="uid://ccral3y5if0ad" path="res://art/3KeyCar_frames/IMG_1640.PNG" id="17_q2vp5"]
+[ext_resource type="Texture2D" uid="uid://rlw8vvy0hygt" path="res://art/4KeyCar_frames/IMG_1647.PNG" id="18_6lb6o"]
+[ext_resource type="Texture2D" uid="uid://0m3sglpxlp4" path="res://art/3KeyCar_frames/IMG_1641.PNG" id="18_b4hel"]
+[ext_resource type="Texture2D" uid="uid://bu0poxnqb1ome" path="res://art/4KeyCar_frames/IMG_1648.PNG" id="19_7tt4e"]
+[ext_resource type="Texture2D" uid="uid://kcgr2qaehci7" path="res://art/3KeyCar_frames/IMG_1642.PNG" id="19_gakpo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ccjcc"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_co74i")
+"texture": ExtResource("3_05rpq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_ooquq")
+"texture": ExtResource("4_cgex6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_0siro")
+"texture": ExtResource("5_21aqw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_2ouu6")
+"texture": ExtResource("6_c8jih")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_hwwmk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_dwfbu")
+"texture": ExtResource("7_4dxpb")
 }],
 "loop": true,
 "name": &"1_beat",
@@ -42,49 +50,118 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("9_dmjto")
+"texture": ExtResource("8_bqoqb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_b7fuw")
+"texture": ExtResource("9_yvhk6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_7mtjf")
+"texture": ExtResource("10_j2sip")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_5u2tb")
+"texture": ExtResource("11_8qlvx")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_3bc8t")
+"texture": ExtResource("12_bxhk4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_tjmyi")
+"texture": ExtResource("13_ubfwy")
 }],
 "loop": true,
 "name": &"2_beat",
-"speed": 5.0
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_isldf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_unuhh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_7ld6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_q2vp5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_b4hel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_gakpo")
+}],
+"loop": true,
+"name": &"3_beat",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_fsm1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_avocg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_o23vy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_chg4q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_6lb6o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7tt4e")
+}],
+"loop": true,
+"name": &"4_beat",
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g6wke"]
-size = Vector2(237.625, 351.688)
+size = Vector2(185, 245)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y471s"]
+size = Vector2(151, 317)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mly6d"]
+size = Vector2(219, 425)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_504ul"]
+size = Vector2(311, 723)
 
 [node name="car" type="Area2D"]
 script = ExtResource("1_1tjh5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
-scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_orkyf")
 
 [node name="car" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_ccjcc")
-animation = &"1_beat"
-frame_progress = 0.841836
+animation = &"4_beat"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="car_collision" type="CollisionShape2D" parent="."]
+position = Vector2(38.5, 6.5)
 shape = SubResource("RectangleShape2D_g6wke")
+disabled = true
+
+[node name="van_collision" type="CollisionShape2D" parent="."]
+position = Vector2(23.5, -26.5)
+shape = SubResource("RectangleShape2D_y471s")
+disabled = true
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 position = Vector2(-1, -74)
+
+[node name="pick_up_collision" type="CollisionShape2D" parent="."]
+position = Vector2(4.5, -7.5)
+shape = SubResource("RectangleShape2D_mly6d")
+disabled = true
+
+[node name="truck_collision" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 8.5)
+shape = SubResource("RectangleShape2D_504ul")
+disabled = true
 
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

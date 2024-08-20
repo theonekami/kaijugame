@@ -7,6 +7,8 @@ signal entered_l
 signal exited_l
 signal entered_r
 signal exited_r
+signal hit_left
+signal hit_right
 
 var note = load("res://base_scenes/duck.tscn")
 # Called when the node enters the scene tree for the first time.
@@ -47,9 +49,15 @@ func _on_left_area_good_area_exited(area):
 	exited_l.emit()
 	area_l.pop_front()
 
-func _on_base_game_kill_left():
-	if len(area_l):
-		area_l[0].dies()
+func _on_base_game_kill_left(num):
+	for i in $Left_area_good.get_overlapping_areas():
+		if i.is_in_group("cars"):
+			if i.type==num:
+				i.dies()
+	#if len(area_l):
+		#if area_l[0].type ==num:
+			#area_l[0].dies()
+	hit_left.emit()
 
 
 func _on_right_area_good_area_entered(area):
@@ -81,6 +89,12 @@ func _on_right_area_good_area_exited(area):
 	area_r.pop_front() # Replace with function body.
 
 
-func _on_base_game_kill_right():
-	if len(area_r):
-		area_r[0].dies()
+func _on_base_game_kill_right(num):
+	for i in $right_area_good.get_overlapping_areas():
+		if i.is_in_group("cars"):
+			if i.type==num:
+				i.dies()
+	#if len(area_r):
+		#if area_r[0].type ==num:
+			#area_r[0].dies()
+	hit_right.emit()

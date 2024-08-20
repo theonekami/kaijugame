@@ -12,8 +12,16 @@ func _ready():
 	match type:
 		1:
 			$car.play("1_beat")
+			$car_collision.disabled=false
 		2:
 			$car.play("2_beat")
+			$van_collision.disabled=false
+		3: 
+			$car.play("3_beat")
+			$pick_up_collision.disabled=false
+		4:
+			$car.play("4_beat")
+			$truck_collision.disabled=false
 	speed=300
 	speed_x=5
 	print("spawn")

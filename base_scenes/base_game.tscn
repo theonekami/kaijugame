@@ -17,7 +17,7 @@ script = ExtResource("1_r8bap")
 
 [node name="Conductor" parent="." instance=ExtResource("2_2yinu")]
 stream = ExtResource("3_xilwj")
-volume_db = -42.59
+volume_db = -37.638
 bpm = 120
 measures = 4
 
@@ -45,12 +45,13 @@ scale = Vector2(0.4, 0.4)
 position = Vector2(0, 1678)
 
 [connection signal="kill_left" from="." to="back_ground" method="_on_base_game_kill_left"]
-[connection signal="kill_left" from="." to="leg_l" method="_on_base_game_kill_left"]
 [connection signal="kill_right" from="." to="back_ground" method="_on_base_game_kill_right"]
-[connection signal="kill_right" from="." to="leg_r" method="_on_base_game_kill_right"]
 [connection signal="left_press" from="StateMachine" to="." method="_on_state_machine_left_press"]
 [connection signal="right_press" from="StateMachine" to="." method="_on_state_machine_right_press"]
 [connection signal="report_beat" from="Conductor" to="." method="_on_conductor_report_beat"]
-[connection signal="report_beat" from="Conductor" to="Head_bob" method="_on_conductor_report_beat"]
 [connection signal="report_beat" from="Conductor" to="duckline" method="_on_conductor_report_beat"]
 [connection signal="report_measure" from="Conductor" to="." method="_on_conductor_report_measure"]
+[connection signal="hit_left" from="back_ground" to="leg_l" method="_on_back_ground_hit_left"]
+[connection signal="hit_left" from="back_ground" to="Head_bob" method="_on_back_ground_hit_left"]
+[connection signal="hit_right" from="back_ground" to="leg_r" method="_on_back_ground_hit_right"]
+[connection signal="hit_right" from="back_ground" to="Head_bob" method="_on_back_ground_hit_left"]

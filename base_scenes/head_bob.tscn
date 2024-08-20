@@ -1,21 +1,125 @@
-[gd_scene load_steps=15 format=3 uid="uid://c8cc3fgngn6ji"]
+[gd_scene load_steps=53 format=3 uid="uid://c8cc3fgngn6ji"]
 
-[ext_resource type="Script" path="res://base_scenes/Head_bob.gd" id="1_3lspi"]
+[ext_resource type="Script" path="res://base_scenes/Head_bob.gd" id="1_5npl2"]
 [ext_resource type="Texture2D" uid="uid://dk3g075oybhnf" path="res://art/kaiju/Bob/Kaiju_headbob_loop-1.png" id="2_kmn2y"]
+[ext_resource type="Texture2D" uid="uid://d3rdyrqn30tue" path="res://art/Background top.png" id="2_wdkil"]
 [ext_resource type="Texture2D" uid="uid://b38shjcg83rp1" path="res://art/kaiju/Bob/Kaiju_headbob_loop-2.png" id="3_dp2x2"]
+[ext_resource type="Texture2D" uid="uid://dc77e1a26ujng" path="res://art/kaiju/Anger-fear/Kaiju_anger-1.png" id="3_mgvf7"]
+[ext_resource type="Texture2D" uid="uid://d2xpyhvptrgj3" path="res://art/kaiju/Anger-fear/Kaiju_anger-2.png" id="4_wf5cq"]
 [ext_resource type="Texture2D" uid="uid://d2vfedwid4pet" path="res://art/kaiju/Bob/Kaiju_headbob_loop-3.png" id="4_ysdq5"]
 [ext_resource type="Texture2D" uid="uid://d06hkyaqmou7x" path="res://art/kaiju/Bob/Kaiju_headbob_loop-4.png" id="5_e7vss"]
+[ext_resource type="Texture2D" uid="uid://bccpoh0gjjetg" path="res://art/kaiju/Anger-fear/Kaiju_anger-3.png" id="5_ttrxc"]
 [ext_resource type="Texture2D" uid="uid://b30h44vr246qc" path="res://art/kaiju/Bob/Kaiju_headbob_loop-5.png" id="6_hgsx7"]
+[ext_resource type="Texture2D" uid="uid://6w3knuuyibyg" path="res://art/kaiju/Anger-fear/Kaiju_anger-4.png" id="6_iywfn"]
+[ext_resource type="Texture2D" uid="uid://dec4srtn6cmaj" path="res://art/kaiju/Anger-fear/Kaiju_anger-5.png" id="7_eq678"]
 [ext_resource type="Texture2D" uid="uid://dgq58ojjh052f" path="res://art/kaiju/Bob/Kaiju_headbob_loop-6.png" id="7_thrb0"]
 [ext_resource type="Texture2D" uid="uid://dylfvt06qr4ht" path="res://art/kaiju/Bob/Kaiju_headbob_loop-7.png" id="8_4tk16"]
+[ext_resource type="Texture2D" uid="uid://j1waehb1i1md" path="res://art/kaiju/Anger-fear/Kaiju_anger-6.png" id="8_mj0jn"]
 [ext_resource type="Texture2D" uid="uid://dju4vvtjnbpnb" path="res://art/kaiju/Bob/Kaiju_headbob_loop-8.png" id="9_h6fsi"]
+[ext_resource type="Texture2D" uid="uid://dm5rbr0qbu6xv" path="res://art/kaiju/Anger-fear/Kaiju_anger-7.png" id="9_io2w1"]
 [ext_resource type="Texture2D" uid="uid://63vig6r5dree" path="res://art/kaiju/Bob/Kaiju_headbob_loop-9.png" id="10_egg1d"]
+[ext_resource type="Texture2D" uid="uid://bpfw6vd1258vp" path="res://art/kaiju/Anger-fear/Kaiju_anger-8.png" id="10_qtlv2"]
 [ext_resource type="Texture2D" uid="uid://bva1frsqhqfl6" path="res://art/kaiju/Bob/Kaiju_headbob_loop-10.png" id="11_0phfc"]
+[ext_resource type="Texture2D" uid="uid://bjmin6a1ogcj5" path="res://art/kaiju/Happy/Kaiju_happy-1.png" id="11_8orf7"]
 [ext_resource type="Texture2D" uid="uid://diur0njevr8i4" path="res://art/kaiju/Bob/Kaiju_headbob_loop-11.png" id="12_ofh7u"]
+[ext_resource type="Texture2D" uid="uid://dtogj6xoq70ns" path="res://art/kaiju/Happy/Kaiju_happy-2.png" id="12_ufydg"]
+[ext_resource type="Texture2D" uid="uid://dinpty40itqyl" path="res://art/kaiju/Happy/Kaiju_happy-3.png" id="13_5kuhy"]
 [ext_resource type="Texture2D" uid="uid://liqkhkuwnhu5" path="res://art/kaiju/Bob/Kaiju_headbob_loop-12.png" id="13_qbou6"]
+[ext_resource type="Texture2D" uid="uid://bmopm46a41p7e" path="res://art/kaiju/Happy/Kaiju_happy-4.png" id="14_vuuwo"]
+[ext_resource type="Texture2D" uid="uid://jyyrk6hms4qt" path="res://art/kaiju/Happy/Kaiju_happy-5.png" id="15_1hpo2"]
+[ext_resource type="Texture2D" uid="uid://cea0inwto4by" path="res://art/kaiju/Happy/Kaiju_happy-6.png" id="16_stnkh"]
+[ext_resource type="Texture2D" uid="uid://cj3c5xje6s3x2" path="res://art/Hellicopter/Hellicopter-1.png" id="29_5g3xd"]
+[ext_resource type="Texture2D" uid="uid://c1y37mb3dhh6f" path="res://art/Hellicopter/Hellicopter-2.png" id="30_yb11j"]
+[ext_resource type="Texture2D" uid="uid://b7nq8wjawgu85" path="res://art/Hellicopter/Hellicopter-3.png" id="31_nylxx"]
+[ext_resource type="Texture2D" uid="uid://kxs0ie3ynhfh" path="res://art/Hellicopter/Hellicopter-4.png" id="32_ibcfd"]
+[ext_resource type="Texture2D" uid="uid://cjyn6lc5hrg0t" path="res://art/Hellicopter/Hellicopter-5.png" id="33_qp8ug"]
+[ext_resource type="Texture2D" uid="uid://cxmgdky3xjsh7" path="res://art/Hellicopter/Hellicopter-6.png" id="34_agdfy"]
+[ext_resource type="Texture2D" uid="uid://bu5wgsqbfeqld" path="res://art/Hellicopter/Hellicopter-7.png" id="35_281cj"]
+[ext_resource type="Texture2D" uid="uid://broq0ju45kxav" path="res://art/Hellicopter/Hellicopter-8.png" id="36_lfb1p"]
+[ext_resource type="Texture2D" uid="uid://lr4pdlboaamb" path="res://art/Hellicopter/Hellicopter-9.png" id="37_0jtq2"]
+[ext_resource type="Texture2D" uid="uid://dswlxdvc4h5gc" path="res://art/Hellicopter/Hellicopter-10.png" id="38_12rci"]
+[ext_resource type="Texture2D" uid="uid://b2aurdynk5mkt" path="res://art/Hellicopter/Hellicopter-11.png" id="39_cmkrk"]
+[ext_resource type="Texture2D" uid="uid://dyvw2agom2wvg" path="res://art/Hellicopter/Hellicopter-12.png" id="40_cuocn"]
+[ext_resource type="Texture2D" uid="uid://bnd0l1ghqneie" path="res://art/Hellicopter/Hellicopter-13.png" id="41_4qucn"]
+[ext_resource type="Texture2D" uid="uid://b8rda2nh31ioe" path="res://art/Hellicopter/Hellicopter-14.png" id="42_gm1qf"]
+[ext_resource type="Texture2D" uid="uid://dhalsowhgc2yi" path="res://art/Hellicopter/Hellicopter-15.png" id="43_jpvrb"]
+[ext_resource type="Texture2D" uid="uid://bke8knstlyh48" path="res://art/Hellicopter/Hellicopter-16.png" id="44_fbmbs"]
+[ext_resource type="Texture2D" uid="uid://ck0sk843icp7e" path="res://art/Hellicopter/Hellicopter-17.png" id="45_70odq"]
+[ext_resource type="Texture2D" uid="uid://h40bn0kjk7bw" path="res://art/Hellicopter/Hellicopter-18.png" id="46_452be"]
+[ext_resource type="Texture2D" uid="uid://q2nhsgv5uaim" path="res://art/Hellicopter/Hellicopter-19.png" id="47_02jg1"]
+[ext_resource type="Texture2D" uid="uid://bmgd6eyc0cm0" path="res://art/Hellicopter/Hellicopter-20.png" id="48_b7eq4"]
+[ext_resource type="Texture2D" uid="uid://cql7wyxd8fy0c" path="res://art/Hellicopter/Hellicopter-21.png" id="49_gexgj"]
+[ext_resource type="Texture2D" uid="uid://3csom7tngfhb" path="res://art/Hellicopter/Hellicopter-22.png" id="50_ax7ws"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xtp4e"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_mgvf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wf5cq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ttrxc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_iywfn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_eq678")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mj0jn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_io2w1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_qtlv2")
+}],
+"loop": true,
+"name": &"Anger",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_8orf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ufydg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_5kuhy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_vuuwo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_stnkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1hpo2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1hpo2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_vuuwo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_5kuhy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ufydg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8orf7")
+}],
+"loop": false,
+"name": &"Happy",
+"speed": 20.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_kmn2y")
@@ -58,10 +162,85 @@ animations = [{
 "speed": 20.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_hesnh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_5g3xd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_yb11j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_nylxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_ibcfd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_qp8ug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_agdfy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_281cj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_lfb1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_0jtq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_12rci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_cmkrk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_cuocn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_4qucn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_gm1qf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_jpvrb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_fbmbs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_70odq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_452be")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_02jg1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_b7eq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_gexgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_ax7ws")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
 [node name="Head_bob" type="Node2D"]
-script = ExtResource("1_3lspi")
+script = ExtResource("1_5npl2")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -75,6 +254,32 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-22, 2351)
+scale = Vector2(3.04074, 3.04074)
+texture = ExtResource("2_wdkil")
+
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_xtp4e")
-animation = &"bob"
+animation = &"Happy"
+frame = 4
+frame_progress = 1.0
+
+[node name="helicpter 1" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_hesnh")
+autoplay = "default"
+frame_progress = 0.983246
+
+[node name="helicpter 2" type="AnimatedSprite2D" parent="."]
+position = Vector2(58, 291)
+sprite_frames = SubResource("SpriteFrames_hesnh")
+frame_progress = 0.18409
+flip_h = true
+
+[node name="helicpter 3" type="AnimatedSprite2D" parent="."]
+position = Vector2(-281, -81)
+sprite_frames = SubResource("SpriteFrames_hesnh")
+frame_progress = 0.779284
+flip_h = true
+
+[connection signal="animation_finished" from="Animation" to="." method="_on_animation_animation_finished"]
