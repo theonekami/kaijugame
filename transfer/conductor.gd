@@ -20,8 +20,6 @@ var time_off_beat = 0.0
 
 
 func _ready():
-	print(bpm)
-	print(measures)
 	sec_per_beat = 60.0 / bpm
 
 

@@ -1,6 +1,7 @@
 extends Node2D
 
-var spawn_beats = [2, 1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+var spawn_beats = [0, 0, 0, 0, 0, 0, 0, 0]
+var beatmap_array
 var car_no = 0
 var pressed_l = false
 var pressed_r = false
@@ -18,7 +19,11 @@ var height = 400
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Conductor.play_with_beat_offset(0)
-
+	var label_text_res = "res://transfer/beatmap.txt"
+	var file = FileAccess.open(label_text_res, FileAccess.READ)
+	var text = file.get_as_text()
+	beatmap_array = text.split(",\n", true) 
+	
 
 func _spawn_notes(to_spawn):
 	if to_spawn > 0:
@@ -47,22 +52,13 @@ func _spawn_notes(to_spawn):
 
 
 func _on_conductor_report_measure(measure_position):
-	print(measure_position)
-	if measure_position <= 32:
-		_spawn_notes(spawn_beats[measure_position - 1])
+	_spawn_notes(spawn_beats[measure_position - 1])
 
 
 func _on_conductor_report_beat(beat_position):
-	var label_text_res = "res://transfer/beatmap.txt"
-	var file = FileAccess.open(label_text_res, FileAccess.READ)
-	var text = file.get_as_text()
-	var some_array = text.split(",", true) 
-
-	if beat_position > 32:
-		for x in range(32):
-			spawn_beats[x] = -2
-
-
+	print(beat_position / 8)
+	var beats = beatmap_array[beat_position / 8]
+	for n in range(0, 8): spawn_beats[n] = int(beats[n])
 
 func _on_state_machine_left_press(number):
 	pressed_l=true

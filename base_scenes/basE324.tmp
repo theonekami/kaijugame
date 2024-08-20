@@ -17,7 +17,7 @@ script = ExtResource("1_r8bap")
 
 [node name="Conductor" parent="." instance=ExtResource("2_2yinu")]
 stream = ExtResource("3_xilwj")
-volume_db = 9.221
+volume_db = 2.21
 bpm = 240
 measures = 8
 
